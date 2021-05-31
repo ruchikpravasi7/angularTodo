@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "angulartodo-fb4f3": {
+      "hosting": {
+        "angularToDo": [
+          "angulartodo-fb4f3"
+        ]
+      }
+    }
+  }
+}

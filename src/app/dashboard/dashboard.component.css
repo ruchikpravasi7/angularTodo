@@ -1,0 +1,35 @@
+:host {
+    display: block;
+  }
+  
+  .task-card {
+    width: 100%;
+    margin: 1rem;
+  }
+  
+  .list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .form-field {
+    display: block;
+  }
+  .logout-button,.delete-task-button {
+    margin-bottom: 2rem;
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+  .new-todo-card {
+    max-width: 20rem;
+    text-align: center;
+  }
+  
+  .addTaskDiv{
+    margin-left: 25%;
+    align-content: center;
+  }
+
+  .title1{
+    margin-left: 10px;
+  }

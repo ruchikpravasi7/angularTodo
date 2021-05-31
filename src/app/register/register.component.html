@@ -1,0 +1,42 @@
+<div class="login-form-div">
+    <mat-card class="login-main-card">
+      <p class="title">Register</p>
+  
+      <form class="example-form" [formGroup]="registerForm">
+        <table class="email-table" cellspacing="0">
+          <tr>
+            <td>
+              <mat-form-field class="example-full-width" >
+                <mat-label>Email</mat-label>
+                <input matInput name="email"  formControlName="email"/>
+              </mat-form-field>
+            </td>
+          </tr>
+        </table>
+        <table class="password-table" cellspacing="0">
+          <tr>
+            <td>
+              <mat-form-field class="example-full-width">
+                <mat-label>Password</mat-label>
+                <input
+                  matInput
+                  name="password"
+                  type="password"
+                  formControlName="password"
+                />
+              </mat-form-field>
+            </td>
+          </tr>
+        </table>
+      </form>
+      <div>
+        <button mat-raised-button (click)="register()">Register</button>
+      </div>
+      <div class="a-class">
+        <a routerLink="/" routerActiveLink="active"
+          >Already registered? Login here</a
+        >
+      </div>
+    </mat-card>
+  </div>
+  

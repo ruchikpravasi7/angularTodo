@@ -1,0 +1,65 @@
+<button mat-raised-button class="logout-button" (click)="onLogout()">
+  logout
+</button>
+<div class="addTaskDiv">
+  <mat-card class="new-todo-card">
+    <p mat-title>Add Task</p>
+    <form [formGroup]="addTask">
+      <table cellspacing="0">
+        <tr>
+          <td>
+            <mat-form-field class="form-field">
+              <mat-label>Title</mat-label>
+
+              <input
+                name="task-title"
+                matInput
+                formControlName="title"
+                type="text"
+                placeholder="Enter title"
+              />
+            </mat-form-field>
+          </td>
+        </tr>
+      </table>
+      <table cellspacing="0">
+        <tr>
+          <td>
+            <mat-form-field class="form-field">
+              <mat-label>Description</mat-label>
+              <textarea
+                name="description"
+                matInput
+                formControlName="description"
+                placeholder="Enter Description..."
+              ></textarea>
+            </mat-form-field>
+          </td>
+        </tr>
+      </table>
+
+      <table>
+        <tr>
+          <td>
+            <button mat-raised-button (click)="onAddTask()">Add Task</button>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </mat-card>
+</div>
+
+<div class="title1">
+<p mat-title>Your Tasks:</p>
+</div>
+<section class="list">
+  <mat-card class="task-card" *ngFor="let task of tasks">
+    <mat-card-header style="margin-left: 10px;">
+      Task Title: {{ task.title }}
+    </mat-card-header>
+    <mat-card-content style="margin-left: 40px;">
+      <p>Task Description: {{ task.description }}</p>
+    </mat-card-content>
+    <button class="delete-task-button" mat-stroked-button (click)="deleteTask(task.key)">delete</button>
+  </mat-card>
+</section>
